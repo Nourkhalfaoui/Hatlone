@@ -1,0 +1,32 @@
+/* edit-blog.css */
+
+/* Style pour le conteneur principal */
+.container {
+    margin-top: 50px;
+}
+
+/* Style pour la carte (card) */
+.card {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Style pour l'en-tête de la carte */
+.card-header {
+    background-color: #f8f9fa;
+    border-bottom: 1px solid #ccc;
+    text-align: center;
+    padding: 15px;
+    font-size: 24px;
+}
+
+/* Style pour le corps de la carte */
+.card-body {
+    padding: 20px;
+}
+
+/* Style pour le bouton de retour */
+.btn-back {
+    margin-top: 20px;
+}

@@ -1,0 +1,66 @@
+{% include 'base.html.twig' %}
+
+
+{% block body %}
+    {# <div class="container">
+
+            {{ form_row(form.email) }}
+            {{ form_row(form.username) }}
+            {{ form_row(form.password) }}
+            {{ form_row(form.save) }}
+
+    </div> #}
+    <div class="container">
+        <div class="card o-hidden border-0 shadow-lg my-5">
+            <div class="card-body">
+                <div class="row">
+                    <div class="col-lg-6 d-none d-lg-block bg-login-image" style="background: url('{{ asset('img/connexion.png') }}'); background-size: cover;"></div>
+                    <div class="col-lg-6">
+                        <div class="p-5">
+                            <div class="text-center">
+                                <h1 class="h4 text-gray-900 mb-4">S'inscrire</h1>
+                            </div>
+                            {{ form_start(form, {'attr': {'class': 'user'}}) }}
+                            <div class="form-group row">
+                                <div class="col-sm-6 mb-3">
+                                    {{ form_errors(form.firstName) }}
+                                    {{ form_widget(form.firstName) }}
+                                </div>
+                                <div class="col-sm-6">
+                                    {{ form_errors(form.lastName) }}
+                                    {{ form_widget(form.lastName) }}
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                {{ form_errors(form.email) }}
+                                {{ form_widget(form.email) }}
+                            </div>
+                            <div class="form-group row">
+                                <div class="col-sm-6 mb-3">
+                                    {{ form_errors(form.password.password) }}
+                                    {{ form_widget(form.password.password) }}
+                                </div>
+                                <div class="col-sm-6">
+                                    {{ form_errors(form.password.passwordRepeat) }}
+                                    {{ form_widget(form.password.passwordRepeat) }}
+                                </div>
+                            </div>
+                            {{ form_widget(form._token) }}
+
+                            <!-- Autres champs de formulaire -->
+
+                            {{ form_row(form.roles) }}
+
+                            <hr>
+                            <div class="text-center">
+                                <a class="small" href="{{ path('app_login') }}">Vous avez déjà un compte ? Connectez-vous !</a>
+                            </div>
+                            {{ form_end(form) }}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+{% endblock %}
